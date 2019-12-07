@@ -8,7 +8,7 @@ LD	:= $(CROSS_COMPILE)gcc
 CFLAGS	:= -W -Wall -Wno-multichar -O3 #-Werror
 CFLAGS	+= -Isqlite-autoconf-3071300
 LDFLAGS :=
-LIBS	:= -lusb -lpthread -ldl
+LIBS	:= -lusb -lpthread -ldl -lmosquitto
 
 OBJ_CM160 := cm160.o usb_utils.o db.o demonize.o sqlite-autoconf-3071300/sqlite3.o
 OBJ_DBIMP := db_import.o db.o sqlite-autoconf-3071300/sqlite3.o
